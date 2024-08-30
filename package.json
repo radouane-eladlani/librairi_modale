@@ -1,6 +1,6 @@
 {
   "name": "librairi_modale",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple React modal component",
   "main": "dist/bundle.js",
   "scripts": {
