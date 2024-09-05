@@ -33,7 +33,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = ".modal-content{background:#fff;border-radius:5px;max-width:500px;padding:20px;width:100%}.modal-header{align-items:center;display:flex;justify-content:space-between}.modal-body{margin-top:10px}.confirmation-message{background-color:#4caf50;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,.2);color:#fff;font-size:18px;left:50%;margin:0 auto;max-width:500px;padding:50px;position:fixed;text-align:center;top:50%;transform:translate(-50%,-50%);z-index:1000}.close-button{background:none;border:none;color:#fff;cursor:pointer;font-size:24px;font-weight:700;line-height:1;position:absolute;right:10px;top:5px}";
+var css_248z = ".modal-overlay{align-items:center!important;background:rgba(0,0,0,.5)!important;bottom:0!important;display:flex!important;justify-content:center!important;left:0!important;position:fixed!important;right:0!important;top:0!important}.modal-content{background:#fff!important;border-radius:5px!important;max-width:500px!important;padding:20px!important;position:relative!important;width:100%!important}.modal-close{background:none!important;border:none!important;cursor:pointer!important;font-size:1.5em!important;position:absolute!important;right:10px!important;top:10px!important}.modal-title{margin-top:0!important}.modal-body{margin-top:20px!important}";
 styleInject(css_248z);
 
 var Modal = function Modal(_ref) {
@@ -43,19 +43,15 @@ var Modal = function Modal(_ref) {
     children = _ref.children;
   if (!isOpen) return null;
   return /*#__PURE__*/React__default["default"].createElement("div", {
-    className: "modal-overlay",
+    className: "modal-overlay"
+  }, /*#__PURE__*/React__default["default"].createElement("div", {
+    className: "modal-content"
+  }, /*#__PURE__*/React__default["default"].createElement("button", {
+    className: "modal-close",
     onClick: onClose
-  }, /*#__PURE__*/React__default["default"].createElement("div", {
-    className: "modal-content",
-    onClick: function onClick(e) {
-      return e.stopPropagation();
-    }
-  }, /*#__PURE__*/React__default["default"].createElement("div", {
-    className: "modal-header"
-  }, /*#__PURE__*/React__default["default"].createElement("h2", null, title), /*#__PURE__*/React__default["default"].createElement("button", {
-    onClick: onClose,
-    className: "close-button"
-  }, "\xD7")), /*#__PURE__*/React__default["default"].createElement("div", {
+  }, "\u2716"), title && /*#__PURE__*/React__default["default"].createElement("h2", {
+    className: "modal-title"
+  }, title), /*#__PURE__*/React__default["default"].createElement("div", {
     className: "modal-body"
   }, children)));
 };
