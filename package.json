@@ -1,14 +1,10 @@
 {
   "name": "librairi_modale",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple React modal component",
   "main": "dist/bundle.js",
   "scripts": {
     "build": "rollup -c"
-  },
-  "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -23,9 +19,11 @@
     "modal",
     "component"
   ],
-  "author": "librairi",
+  "author": "Radouane EL ADLANI",
   "license": "MIT",
   "dependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
